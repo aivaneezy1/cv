@@ -1,12 +1,13 @@
 import React from "react";
 import Image from "next/image";
-
+import Card from "./Card";
+import Contact from "./Contact";
 const ProgrammingLanguage = () => {
   return (
-    <div className="mt-10 ml-20 sm:ml-40 relative ">
+    <div className="mt-10 ml-20  mr-5 sm:ml-40 relative ">
       <div>
         <h2 className="text-white text-4xl font-semibold ">Welcome!</h2>
-        <h2 className="text-white text-4xl font-semibold">
+        <h2 className="text-white text-4xl font-bold">
           <span className="border-b-4 border-green-500 border-double">
             I'm Aivaneezy
           </span>
@@ -15,17 +16,60 @@ const ProgrammingLanguage = () => {
         <h2 className="text-gray-400 mt-5">
           Based in Italy. I mostly do web development stuff.
         </h2>
-        <h2 className="mt-4 text-white text-1xl ">
-          Here are some programming languages I know:
+        <h2 className="mt-4 text-white text-4xl font-bold w-1/2 ">
+          <span className="border-b-4 border-green-500 border-doublex">
+            Tech Stack
+          </span>
         </h2>
-        <ul className="list-disc list-inside ml-5 text-gray-400">
-          <li>JavaScript</li>
-          <li>Python</li>
-          <li>C</li>
-          <li>C++</li>
-          <li>React</li>
-          <li>Node.js</li>
-        </ul>
+
+        <p className="text-white font-semibold text-lg mt-5">
+          Here is a collection of the stack I use
+        </p>
+        {/*Tech Stack */}
+        <div className="  ">
+          <table className="hover:border-2  ">
+            <thead>
+              <tr>
+                <th className="border-b-2 p-2 text-left text-white font-bold text-lg mt-5">
+                  Category
+                </th>
+                <th className="border-b-2 p-2 text-left text-white">Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border-b-2 p-2 pr-20 text-white font-bold text-lg mt-5">
+                  Languages
+                </td>
+                <td className="border-b-2 p-2 text-white">
+                  Javascript, TypeScript, C & C++
+                </td>
+              </tr>
+              <tr>
+                <td className="border-b-2 p-2 text-white font-bold text-lg mt-5">
+                  Frameworks
+                </td>
+                <td className="border-b-2 p-2 text-white">Express, Nextjs</td>
+              </tr>
+              <tr>
+                <td className="border-b-2 p-2  text-white font-bold text-lg mt-5">
+                  Libraries
+                </td>
+                <td className="border-b-2 p-2 text-white">
+                  React & TailwindCss
+                </td>
+              </tr>
+              <tr>
+                <td className="border-b-2 p-2 text-white font-bold text-lg mt-5">
+                  Databases
+                </td>
+                <td className="border-b-2 p-2 text-white">
+                  MongoDb & Postgresql
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div className="flex justify-center items-center absolute top-0 right-40 transform translate-x-16">
@@ -61,6 +105,12 @@ const ProgrammingLanguage = () => {
           </div>
         </div>
       </div>
+
+      {/*Project Card  Component*/}
+      <Card />
+
+      {/* Contact Component*/}
+      <Contact/>
     </div>
   );
 };
