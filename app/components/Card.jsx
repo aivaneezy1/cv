@@ -26,7 +26,7 @@ const Card = () => {
             </Link>
           </div>
         </div>
-        <p className='mt-4 text-sm md:text-base'>
+        <p className='mt-4 text-md md:text-base'>
           A full-stack web application designed to help users create and download professional CVs. Technology Stack used are Nextjs, Node Express, TailwindCss, MongoDB and Amazon S3 for file storage.
         </p>
         <p>Website Link: <Link href="https://www.cvcreator.it/" className='text-blue-500 hover:border-b-2 border-blue-500'>https://www.cvcreator.it/</Link></p>
@@ -55,7 +55,7 @@ const Card = () => {
             </Link>
           </div>
         </div>
-        <p className='mt-4 text-sm md:text-base'>
+        <p className='mt-4 text-md md:text-base'>
           Details about the project.
         </p>
       </div>

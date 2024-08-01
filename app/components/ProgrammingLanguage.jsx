@@ -9,7 +9,7 @@ const ProgrammingLanguage = () => {
         <h2 className="text-white text-4xl font-semibold ">Welcome!</h2>
         <h2 className="text-white text-4xl font-bold">
           <span className="border-b-4 border-green-500 border-double">
-            I'm Aivaneezy
+            I&#39;m Aivaneezy
           </span>
           <span className="mt-2 sm:mt-0"></span>
         </h2>

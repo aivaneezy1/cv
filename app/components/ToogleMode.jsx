@@ -20,14 +20,14 @@ const ToggleMode = () => {
   const isDark = theme === "dark";
   return (
     <Button
-      variant="secondary"
+      variant="noBackground"
       size="icon"
       onClick={() => setTheme(isDark ? "light" : "dark")}
     >
       {isDark ? (
         <Sun className="hover:cursor-pointer hover:text-primary" />
       ) : (
-        <Moon className="hover:cursor-pointer hover:text-primary" />
+        <Moon style={{ color: 'white' }}  className="hover:cursor-pointer hover:text-primary" />
       )}
     </Button>
   );
