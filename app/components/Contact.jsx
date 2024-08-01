@@ -1,38 +1,41 @@
-"use client"
-import React, { useState } from "react";
+"use client";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import Link from "next/link";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send formData to your email service
-    console.log("Form data submitted:", formData);
-    alert("Message sent!");
-    // Reset the form
-    setFormData({
-      name: "",
-      email: "",
-      message: ""
-    });
+
+    emailjs
+      .sendForm("service_ld24m9a", "template_etaoydb", form.current, {
+        publicKey: "qVRXrHYsC0K_SArP1",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setIsSubmitted(true);
+          setName("");
+          setEmail("");
+          setMessage("");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+
+    e.target.reset();
   };
 
   return (
     <div className="mb-20">
-      <h2 className="mt-4 text-white text-4xl font-bold w-1/2">
+      <h2 className="mt-4 text-white text-4xl font-bold w-full sm:w-1/2">
         <span className="border-b-4 border-green-500 border-double">
           Find me on
         </span>
@@ -40,18 +43,18 @@ const Contact = () => {
 
       <div className="flex flex-row text-white mt-5 gap-5">
         <div>
-         <Link href="/">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-            className="w-6 h-6"
-          >
-            <path
-              fill="#ffffff"
-              d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"
-            />
-          </svg>
-         </Link>
+          <Link href="/">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              className="w-6 h-6"
+            >
+              <path
+                fill="#ffffff"
+                d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"
+              />
+            </svg>
+          </Link>
         </div>
 
         <div>
@@ -70,17 +73,24 @@ const Contact = () => {
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="mt-10  w-full sm:w-1/2 ">
+      <form
+        ref={form}
+        onSubmit={handleSubmit}
+        className="mt-10  w-full sm:w-1/2 "
+      >
         <div className="mb-4">
-          <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
+          <label
+            className="block text-white text-sm font-bold mb-2"
+            htmlFor="name"
+          >
             Name
           </label>
           <input
             type="text"
             id="name"
             name="name"
-            value={formData.name}
-            onChange={handleChange}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             placeholder="Enter your name"
             className="shadow appearance-none hover:border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-black"
             required
@@ -88,15 +98,18 @@ const Contact = () => {
         </div>
 
         <div className="mb-4">
-          <label className="block text-white text-sm font-bold mb-2" htmlFor="email">
+          <label
+            className="block text-white text-sm font-bold mb-2"
+            htmlFor="email"
+          >
             Email
           </label>
           <input
             type="email"
             id="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
             className="shadow appearance-none hover:border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-black"
             required
@@ -104,14 +117,17 @@ const Contact = () => {
         </div>
 
         <div className="mb-6">
-          <label className="block text-white text-sm font-bold mb-2" htmlFor="message">
+          <label
+            className="block text-white text-sm font-bold mb-2"
+            htmlFor="message"
+          >
             Message
           </label>
           <textarea
             id="message"
             name="message"
-            value={formData.message}
-            onChange={handleChange}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             placeholder="Enter your messagge"
             className="shadow appearance-none hover:border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-black"
             rows="4"

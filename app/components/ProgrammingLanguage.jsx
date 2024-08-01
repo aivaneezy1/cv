@@ -13,11 +13,11 @@ const ProgrammingLanguage = () => {
           </span>
           <span className="mt-2 sm:mt-0"></span>
         </h2>
-        <h2 className="text-gray-400 mt-5">
+        <h2 className="text-neutral-300 mt-5">
           Based in Italy. I mostly do web development stuff.
         </h2>
         <h2 className="mt-4 text-white text-4xl font-bold w-1/2 ">
-          <span className="border-b-4 border-green-500 border-doublex">
+          <span className="border-b-4 border-green-500 border-double rounded">
             Tech Stack
           </span>
         </h2>
@@ -26,8 +26,8 @@ const ProgrammingLanguage = () => {
           Here is a collection of the stack I use
         </p>
         {/*Tech Stack */}
-        <div className="  ">
-          <table className="hover:border-2  ">
+        <div className=" mt-2  ">
+          <table className="hover:border-2   ">
             <thead>
               <tr>
                 <th className="border-b-2 p-2 text-left text-white font-bold text-lg mt-5">
@@ -79,7 +79,7 @@ const ProgrammingLanguage = () => {
             alt="picture"
             width={500}
             height={500}
-            className="hidden lg:block rounded-xl shadow-lg transform scale-105 transition-transform duration-300 border-4 border-green-500 border-double p-1"
+            className="hidden lg:block rounded-xl shadow-lg transform scale-105 transition-transform duration-300 border-4 border-green-500 border-double p-1 -z-1 "
           />
         </div>
       </div>

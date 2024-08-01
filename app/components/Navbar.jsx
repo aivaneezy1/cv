@@ -1,16 +1,19 @@
+"use client"
 import Link from "next/link";
 import React from "react";
+import ToggleMode from "./ToogleMode";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
+   const { theme } = useTheme();
   return (
-    <div className="flex justify-between items-center">
-      <div className="flex gap-10 text-white mt-5 cursor-pointer">
-        <div className="ml-10 ">Home</div>
-        
+    <div className="flex justify-end items-center gap-5">
+      <div className=" r-5 mt-5 flex items-center"> 
+      <h2 className="text-white">English</h2>
+   
       </div>
-
       <div className="mr-5 mt-5 flex items-center text-white cursor-pointer">
-        <div>
+        {/* <div>
           <Link href="https://github.com/aivaneezy1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +26,9 @@ const Navbar = () => {
             />
           </svg>
           </Link>
-        </div>
+        </div> */}
+        <ToggleMode/>
+   
       </div>
     </div>
   );
