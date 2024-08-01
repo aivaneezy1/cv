@@ -2,13 +2,16 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Link from "next/link";
-
+import { useTheme } from "next-themes";
+import { useTranslation } from "react-i18next";
 const Contact = () => {
+  const {t, i18n} = useTranslation();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const form = useRef();
+  const { theme } = useTheme();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,11 +36,14 @@ const Contact = () => {
     e.target.reset();
   };
 
+  const inputBgColor = theme === "dark" ? "bg-black" : "bg-white";
+
+
   return (
     <div className="mb-20">
       <h2 className="mt-4 text-white text-4xl font-bold w-full sm:w-1/2">
         <span className="border-b-4 border-green-500 border-double">
-          Find me on
+          {t("contact.contactFind")}
         </span>
       </h2>
 
@@ -83,7 +89,7 @@ const Contact = () => {
             className="block text-white text-sm font-bold mb-2"
             htmlFor="name"
           >
-            Name
+            {t("contact.name")}
           </label>
           <input
             type="text"
@@ -91,8 +97,8 @@ const Contact = () => {
             name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Enter your name"
-            className="shadow appearance-none hover:border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-black"
+            placeholder= {t("contact.inputName")}
+            className={`shadow appearance-none hover:border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline ${inputBgColor}`}
             required
           />
         </div>
@@ -102,7 +108,7 @@ const Contact = () => {
             className="block text-white text-sm font-bold mb-2"
             htmlFor="email"
           >
-            Email
+             {t("contact.email")}
           </label>
           <input
             type="email"
@@ -110,8 +116,8 @@ const Contact = () => {
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-            className="shadow appearance-none hover:border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-black"
+            placeholder= {t("contact.inputEmail")}
+            className={`shadow appearance-none hover:border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline ${inputBgColor}`}
             required
           />
         </div>
@@ -121,15 +127,15 @@ const Contact = () => {
             className="block text-white text-sm font-bold mb-2"
             htmlFor="message"
           >
-            Message
+            {t("contact.message")}
           </label>
           <textarea
             id="message"
             name="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            placeholder="Enter your messagge"
-            className="shadow appearance-none hover:border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-black"
+            placeholder= {t("contact.inputMessage")}
+            className={`shadow appearance-none hover:border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline ${inputBgColor}`}
             rows="4"
             required
           />
@@ -140,7 +146,7 @@ const Contact = () => {
             type="submit"
             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
-            Send
+            {t("contact.sendButton")}
           </button>
         </div>
       </form>

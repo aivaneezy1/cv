@@ -1,29 +1,35 @@
+
+"use client"
 import React from "react";
 import Image from "next/image";
 import Card from "./Card";
 import Contact from "./Contact";
+import { useTranslation } from "react-i18next";
+import i18n from "./i18n";
 const ProgrammingLanguage = () => {
+  const {t, i18n} = useTranslation();
+
   return (
     <div className="mt-10 ml-20  mr-5 sm:ml-40 relative ">
       <div>
-        <h2 className="text-white text-4xl font-semibold ">Welcome!</h2>
+        <h2 className="text-white text-4xl font-semibold ">{t("welcome")}</h2>
         <h2 className="text-white text-4xl font-bold">
           <span className="border-b-4 border-green-500 border-double">
-            I&#39;m Aivaneezy
+            {t("intro")}
           </span>
           <span className="mt-2 sm:mt-0"></span>
         </h2>
         <h2 className="text-neutral-300 mt-5">
-          Based in Italy. I mostly do web development stuff.
+          {t("location")}
         </h2>
         <h2 className="mt-4 text-white text-4xl font-bold w-1/2 ">
           <span className="border-b-4 border-green-500 border-double rounded">
-            Tech Stack
+           {t("techStack")}
           </span>
         </h2>
 
         <p className="text-white font-semibold text-lg mt-5">
-          Here is a collection of the stack I use
+          {t("stackDescription")}
         </p>
         {/*Tech Stack */}
         <div className=" mt-2  ">
@@ -31,15 +37,15 @@ const ProgrammingLanguage = () => {
             <thead>
               <tr>
                 <th className="border-b-2 p-2 text-left text-white font-bold text-lg mt-5">
-                  Category
+                  {t("category")}
                 </th>
-                <th className="border-b-2 p-2 text-left text-white">Details</th>
+                <th className="border-b-2 p-2 text-left text-white"> {t("d")}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td className="border-b-2 p-2 pr-20 text-white font-bold text-lg mt-5">
-                  Languages
+                   {t("categories.languages")}
                 </td>
                 <td className="border-b-2 p-2 text-white">
                   Javascript, TypeScript, C & C++
@@ -47,13 +53,13 @@ const ProgrammingLanguage = () => {
               </tr>
               <tr>
                 <td className="border-b-2 p-2 text-white font-bold text-lg mt-5">
-                  Frameworks
+                    {t("categories.frameworks")}
                 </td>
                 <td className="border-b-2 p-2 text-white">Express, Nextjs</td>
               </tr>
               <tr>
                 <td className="border-b-2 p-2  text-white font-bold text-lg mt-5">
-                  Libraries
+                      {t("categories.libraries")}
                 </td>
                 <td className="border-b-2 p-2 text-white">
                   React & TailwindCss
@@ -61,7 +67,7 @@ const ProgrammingLanguage = () => {
               </tr>
               <tr>
                 <td className="border-b-2 p-2 text-white font-bold text-lg mt-5">
-                  Databases
+                  {t("categories.databases")}
                 </td>
                 <td className="border-b-2 p-2 text-white">
                   MongoDb & Postgresql
@@ -73,13 +79,13 @@ const ProgrammingLanguage = () => {
       </div>
 
       <div className="flex justify-center items-center absolute top-0 right-40 transform translate-x-16">
-        <div>
+        <div className="">
           <Image
             src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/37f3bc41-b735-44cc-aba2-00f8a375c0be/de8aamf-008ce21c-9dbe-43e7-bbb7-4387103d62cc.png/v1/fit/w_828,h_414,q_70,strp/__glow_series___mmd_led_mouse_mat_download_by_chestnutscoop_de8aamf-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjAwMCIsInBhdGgiOiJcL2ZcLzM3ZjNiYzQxLWI3MzUtNDRjYy1hYmEyLTAwZjhhMzc1YzBiZVwvZGU4YWFtZi0wMDhjZTIxYy05ZGJlLTQzZTctYmJiNy00Mzg3MTAzZDYyY2MucG5nIiwid2lkdGgiOiI8PTQwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.sXXE54Jc_HrpF-WBJ-Kr_KpjURXEQkkaZcvlMhT4hBs"
             alt="picture"
             width={500}
             height={500}
-            className="hidden lg:block rounded-xl shadow-lg transform scale-105 transition-transform duration-300 border-4 border-green-500 border-double p-1 -z-1 "
+            className="hidden lg:block rounded-xl shadow-lg transform scale-105 transition-transform duration-300 border-4 border-green-500 border-double p-1 -z-10 "
           />
         </div>
       </div>
@@ -88,7 +94,7 @@ const ProgrammingLanguage = () => {
         <div className="flex flex-row justify-center items-center gap-1">
           <div className="border-b-4 border-green-500 border-double">
             <h2 className="text-4xl font-semibold transform rotate-[15deg] border-b-4 border-purple-500 border-double">
-              Projects
+              {t("projects")}
             </h2>
           </div>
           <div className="items-center flex">

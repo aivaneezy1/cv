@@ -17,7 +17,12 @@ const ToggleMode = () => {
     return <Button variant="secondary" size="icon" disabled={true}></Button>;
   }
 
+
+
   const isDark = theme === "dark";
+    console.log("theme", theme);
+      console.log("themee", isDark);
+
   return (
     <Button
       variant="noBackground"

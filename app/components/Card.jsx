@@ -1,14 +1,16 @@
+"use client"
 import React from 'react';
 import Link from 'next/link';
-
+import { useTranslation } from "react-i18next";
 const Card = () => {
+  const {t, i18n} = useTranslation();
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 text-white mb-10 px-4'>
       <div className='border border-green-500 hover:border-double hover:border-4 p-6 w-full h-auto md:h-72 lg:h-80 rounded-lg shadow-lg transition-transform transform hover:scale-105'>
         <div className='flex flex-row justify-between items-start md:items-center'>
           <Link href="https://github.com/aivaneezy1/mensa">
             <h2 className='text-blue-500 text-2xl md:text-3xl font-semibold hover:border-b-2 border-blue-500 mb-2 md:mb-0'>
-              Curriculum Generator
+              {t("cvTitle.title")}
             </h2>
           </Link>
           <div className='flex-shrink-0'>
@@ -27,9 +29,9 @@ const Card = () => {
           </div>
         </div>
         <p className='mt-4 text-md md:text-base'>
-          A full-stack web application designed to help users create and download professional CVs. Technology Stack used are Nextjs, Node Express, TailwindCss, MongoDB and Amazon S3 for file storage.
+          {t("cvTitle.description")}
         </p>
-        <p>Website Link: <Link href="https://www.cvcreator.it/" className='text-blue-500 hover:border-b-2 border-blue-500'>https://www.cvcreator.it/</Link></p>
+        <p>{t("cvTitle.websiteLink")}: <Link href="https://www.cvcreator.it/" className='text-blue-500 hover:border-b-2 border-blue-500'>https://www.cvcreator.it/</Link></p>
       </div>
 
       {/* Second Project */}

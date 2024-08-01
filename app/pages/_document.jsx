@@ -10,7 +10,6 @@ class MyDocument extends Document {
           <Script
             src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
             strategy="lazyOnload" // or "lazyOnload" if you don't need it immediately
-     
           />
           <Script
             id="emailjs-init"
