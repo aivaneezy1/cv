@@ -36,8 +36,8 @@ const Contact = () => {
     e.target.reset();
   };
 
-  const inputBgColor = theme === "dark" ? "bg-black" : "bg-white";
-
+  const inputBgColor = theme === "light" ? "bg-white" : "bg-black";
+  console.log("theme", theme);
 
   return (
     <div className="mb-20">
@@ -98,7 +98,7 @@ const Contact = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder= {t("contact.inputName")}
-            className={`shadow appearance-none hover:border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline ${inputBgColor}`}
+            className={`shadow appearance-none hover:border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline ${inputBgColor } `}
             required
           />
         </div>
