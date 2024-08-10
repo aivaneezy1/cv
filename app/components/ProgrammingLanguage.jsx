@@ -23,7 +23,7 @@ const ProgrammingLanguage = () => {
           {t("location")}
         </h2>
         <h2 className="mt-4 text-white text-4xl font-bold w-1/2 ">
-          <span className="border-b-4 border-green-500 border-double rounded">
+          <span className="border-b-4 border-green-500 border-double rounded whitespace-nowrap">
            {t("techStack")}
           </span>
         </h2>
@@ -32,7 +32,7 @@ const ProgrammingLanguage = () => {
           {t("stackDescription")}
         </p>
         {/*Tech Stack */}
-        <div className=" mt-2  ">
+        <div className=" mt-2 flex items-center  ">
           <table className="hover:border-2   ">
             <thead>
               <tr>
