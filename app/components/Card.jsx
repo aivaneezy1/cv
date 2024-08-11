@@ -6,19 +6,20 @@ const Card = () => {
   const { t, i18n } = useTranslation();
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 text-white mb-10 px-4">
-      <div className="border border-green-500 hover:border-double hover:border-4 p-6 w-full h-auto md:h-72 lg:h-80 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-        <div className="flex flex-row justify-between items-start md:items-center">
+      {/*Proejct 1 */}
+      <div className="border border-green-500 hover:border-double hover:border-4 p-4 sm:p-6 w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105">
+        <div className="flex flex-row sm:flex-row justify-between items-start sm:items-center h-auto">
           <Link href="https://github.com/aivaneezy1/mensa">
-            <h2 className="text-blue-500 text-2xl md:text-3xl font-semibold hover:border-b-2 border-blue-500 mb-2 md:mb-0">
+            <h2 className="text-blue-500 text-xl sm:text-2xl lg:text-3xl font-semibold hover:border-b-2 border-blue-500 mb-2 sm:mb-0">
               {t("cvTitle.title")}
             </h2>
           </Link>
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 mt-2 sm:mt-0">
             <Link href="https://github.com/aivaneezy1/mensa">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 496 512"
-                className="w-6 h-6 md:w-8 md:h-8"
+                className="w-6 h-6 sm:w-8 sm:h-8"
               >
                 <path
                   fill="#ffffff"
@@ -28,9 +29,11 @@ const Card = () => {
             </Link>
           </div>
         </div>
-        <p className="mt-4 text-md md:text-base">{t("cvTitle.description")}</p>
+        <p className="mt-4 text-md md:text-base">
+          {t("cvTitle.description")}
+        </p>
         <p>
-          {t("cvTitle.websiteLink")}:{" "}
+          {t("cvTitle.websiteLink")}{" "}
           <Link
             href="https://www.cvcreator.it/"
             className="text-blue-500 hover:border-b-2 border-blue-500"
@@ -41,9 +44,9 @@ const Card = () => {
       </div>
 
       {/* Second Project */}
-      <div className="border border-green-500 hover:border-double hover:border-4 p-6 w-full h-auto md:h-72 lg:h-80 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-        <div className="flex flex-row justify-between items-start md:items-center">
-          <Link href="/">
+      <div className="border border-green-500 hover:border-double hover:border-4 p-6 w-full  h-auto   rounded-lg shadow-lg transition-transform transform hover:scale-105">
+        <div className="flex flex-row justify-between items-start md:items-center  h-auto ">
+          <Link href="https://github.com/aivaneezy1/ai-prompt">
             <h2 className="text-blue-500 text-2xl md:text-3xl font-semibold hover:border-b-2 border-blue-500 mb-2 md:mb-0">
               {t("aiPrompt.title")}
             </h2>
@@ -67,21 +70,21 @@ const Card = () => {
           {t("aiPrompt.description")}{" "}
         </p>
 
-          <p>
-            {t("aiPrompt.websiteLink")}:{" "}
-            <Link
-              href="https://www.shareprompt.it/"
-              className="text-blue-500 hover:border-b-2 border-blue-500"
-            >
-              https://www.shareprompt.it/
-            </Link>
-          </p>
+        <p>
+          {t("aiPrompt.websiteLink")}{" "}
+          <Link
+            href="https://www.shareprompt.it/"
+            className="text-blue-500 hover:border-b-2 border-blue-500"
+          >
+            https://www.shareprompt.it/
+          </Link>
+        </p>
       </div>
 
       {/* Third Project */}
-      <div className="border border-green-500 hover:border-double hover:border-4 p-6 w-full h-auto md:h-72 lg:h-80 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-        <div className="flex flex-row justify-between items-start md:items-center">
-          <Link href="/">
+      <div className="border border-green-500 hover:border-double hover:border-4 p-6 w-full  h-auto  rounded-lg shadow-lg transition-transform transform hover:scale-105">
+        <div className="flex flex-row justify-between items-start md:items-center  h-auto ">
+          <Link href="https://github.com/aivaneezy1/Quizify">
             <h2 className="text-blue-500 text-2xl md:text-3xl font-semibold hover:border-b-2 border-blue-500 mb-2 md:mb-0">
               {t("quizify.title")}
             </h2>
@@ -104,20 +107,20 @@ const Card = () => {
         <p className="mt-4 text-md md:text-base">{t("quizify.description")} </p>
 
         <p>
-          {t("quizify.websiteLink")}:{" "}
+          {t("quizify.websiteLink")}{" "}
           <Link
             href="https://www.quizify.it/"
             className="text-blue-500 hover:border-b-2 border-blue-500"
           >
-           https://www.quizify.it/
+            https://www.quizify.it/
           </Link>
         </p>
       </div>
 
       {/* Fourth Project */}
-      <div className="border border-green-500 hover:border-double hover:border-4 p-6 w-full h-auto md:h-72 lg:h-80 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-        <div className="flex flex-row justify-between items-start md:items-center">
-          <Link href="/">
+      <div className="flex flex-col border border-green-500 hover:border-double hover:border-4 p-6 w-full  h-auto  rounded-lg shadow-lg transition-transform transform hover:scale-105">
+        <div className="flex flex-row justify-between items-start md:items-center  h-auto ">
+          <Link href="https://github.com/aivaneezy1/gd-club">
             <h2 className="text-blue-500 text-2xl md:text-3xl font-semibold hover:border-b-2 border-blue-500 mb-2 md:mb-0">
               {t("yellowDragon.title")}
             </h2>
@@ -141,7 +144,7 @@ const Card = () => {
           {t("yellowDragon.description")}:{" "}
         </p>
         <p>
-          {t("yellowDragon.websiteLink")}:{" "}
+          {t("yellowDragon.websiteLink")}{" "}
           <Link
             href="https://www.yellowdragon.it/"
             className="text-blue-500 hover:border-b-2 border-blue-500"

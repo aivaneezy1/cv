@@ -56,7 +56,7 @@ i18n.use(initReactI18next).init({
         yellowDragon:{
            title: "Motorcyle Club",
           description:
-            "A full-stack web application designed for motorcycle club enthusiasts. Users can explore photo albums featuring club activities, while administrators have access to a dedicated admin panel for uploading or deleting albums and pictures. Use Next.js with Javascript & react for the frotend, Express for the backend, MongoDb for the database, NextAuth for authentication and Amazon S3 for file Storage",
+            "A full-stack web application designed for motorcycle club enthusiasts. Users can explore photo albums featuring club activities, while admin can uploading or deleting albums and pictures. Use Next.js with Javascript & react for the frotend, Express for the backend, MongoDb for the database, NextAuth for authentication and Amazon S3 for file Storage",
             websiteLink: "Website Link: ",
         },
 
@@ -108,7 +108,7 @@ i18n.use(initReactI18next).init({
           title: "Condivisione di prompt per l'IA",
           description:
             "Un'applicazione web full-stack che consenta agli utenti di condividere e pubblicare prompt per l'IA. Utilizza Next.js per il frontend, Node.js con Express per il backend, Tailwind CSS per lo stile, e MongoDB per la memorizzazione dei dati",
-          websiteLink: "Website Link: ",
+          websiteLink: "Link al Sito: ",
         },
 
 
@@ -116,7 +116,15 @@ i18n.use(initReactI18next).init({
           title: "Gioco a Quiz",
           description:
             "Un'applicazione web full-stack per un gioco a quiz dove gli utenti possono partecipare a quiz. Utilizza Next.js con TypeScript per il frontend, Express per il backend, MongoDB per il database, Clerk per l'autenticazione e Sanity per memorizzare le domande.",
-            websiteLink: "Website Link: ",
+            websiteLink: "Link al Sito: ",
+        },
+
+
+         yellowDragon:{
+           title: "Club di Motociclisti",
+          description:
+            "Un'applicazione web full-stack progettata per gli appassionati di club motociclisti. Gli utenti possono esplorare album fotografici che mostrano le attività del club, mentre gli amministratori hanno accesso a un pannello di amministrazione dedicato per caricare o eliminare album e immagini. Utilizza Next.js con Javascript e React per il frontend, Express per il backend, MongoDB per il database, NextAuth per l'autenticazione e Amazon S3 per l'archiviazione dei file.",
+            websiteLink: "Link al Sito: ",
         },
 
 
