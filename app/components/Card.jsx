@@ -8,7 +8,7 @@ const Card = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 text-white mb-10 px-4">
       {/*Proejct 1 */}
       <div className="border border-green-500 hover:border-double hover:border-4 p-4 sm:p-6 w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105">
-        <div className="flex flex-row sm:flex-row justify-between items-start sm:items-center h-auto">
+        <div className="flex flex-row sm:flex-row justify-between items-start sm:items-center h-auto w-auto">
           <Link href="https://github.com/aivaneezy1/mensa">
             <h2 className="text-blue-500 text-xl sm:text-2xl lg:text-3xl font-semibold hover:border-b-2 border-blue-500 mb-2 sm:mb-0">
               {t("cvTitle.title")}
@@ -45,7 +45,7 @@ const Card = () => {
 
       {/* Second Project */}
       <div className="border border-green-500 hover:border-double hover:border-4 p-6 w-full  h-auto   rounded-lg shadow-lg transition-transform transform hover:scale-105">
-        <div className="flex flex-row justify-between items-start md:items-center  h-auto ">
+        <div className="flex flex-row justify-between items-start md:items-center  h-auto w-auto">
           <Link href="https://github.com/aivaneezy1/ai-prompt">
             <h2 className="text-blue-500 text-2xl md:text-3xl font-semibold hover:border-b-2 border-blue-500 mb-2 md:mb-0">
               {t("aiPrompt.title")}
@@ -83,7 +83,7 @@ const Card = () => {
 
       {/* Third Project */}
       <div className="border border-green-500 hover:border-double hover:border-4 p-6 w-full  h-auto  rounded-lg shadow-lg transition-transform transform hover:scale-105">
-        <div className="flex flex-row justify-between items-start md:items-center  h-auto ">
+        <div className="flex flex-row justify-between items-start md:items-center h-auto w-auto ">
           <Link href="https://github.com/aivaneezy1/Quizify">
             <h2 className="text-blue-500 text-2xl md:text-3xl font-semibold hover:border-b-2 border-blue-500 mb-2 md:mb-0">
               {t("quizify.title")}
@@ -119,7 +119,7 @@ const Card = () => {
 
       {/* Fourth Project */}
       <div className="flex flex-col border border-green-500 hover:border-double hover:border-4 p-6 w-full  h-auto  rounded-lg shadow-lg transition-transform transform hover:scale-105">
-        <div className="flex flex-row justify-between items-start md:items-center  h-auto ">
+        <div className="flex flex-row justify-between items-start md:items-center  h-auto w-auto ">
           <Link href="https://github.com/aivaneezy1/gd-club">
             <h2 className="text-blue-500 text-2xl md:text-3xl font-semibold hover:border-b-2 border-blue-500 mb-2 md:mb-0">
               {t("yellowDragon.title")}
