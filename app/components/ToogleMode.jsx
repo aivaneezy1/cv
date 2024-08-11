@@ -20,8 +20,7 @@ const ToggleMode = () => {
 
 
   const isDark = theme === "dark";
-    console.log("theme", theme);
-      console.log("themee", isDark);
+   
 
   return (
     <Button

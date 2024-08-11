@@ -37,7 +37,7 @@ const Contact = () => {
   };
 
   const inputBgColor = theme === "light" ? "bg-white" : "bg-black";
-  console.log("theme", theme);
+
 
   return (
     <div className="mb-20">

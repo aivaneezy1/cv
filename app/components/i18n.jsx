@@ -52,6 +52,14 @@ i18n.use(initReactI18next).init({
             websiteLink: "Website Link: ",
         },
 
+        
+        yellowDragon:{
+           title: "Motorcyle Club",
+          description:
+            "A full-stack web application designed for motorcycle club enthusiasts. Users can explore photo albums featuring club activities, while administrators have access to a dedicated admin panel for uploading or deleting albums and pictures. Use Next.js with Javascript & react for the frotend, Express for the backend, MongoDb for the database, NextAuth for authentication and Amazon S3 for file Storage",
+            websiteLink: "Website Link: ",
+        },
+
         contact: {
           contactFind: "Find me on",
           name: "Name",
@@ -110,6 +118,7 @@ i18n.use(initReactI18next).init({
             "Un'applicazione web full-stack per un gioco a quiz dove gli utenti possono partecipare a quiz. Utilizza Next.js con TypeScript per il frontend, Express per il backend, MongoDB per il database, Clerk per l'autenticazione e Sanity per memorizzare le domande.",
             websiteLink: "Website Link: ",
         },
+
 
 
         contact: {
